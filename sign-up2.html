@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Final</title>
+        <style>
+        .verification-page { background-color: #fff; display: flex; max-width: 480px; width: 100%; padding-bottom: 35px; flex-direction: column; overflow: hidden; font-family: Inter, sans-serif; font-weight: 400; margin: 0 auto; }
+        .header-image { aspect-ratio: 8.55; object-fit: contain; object-position: center; width: 100%; }
+        .content-wrapper { display: flex; margin-top: 36px; width: 90%; flex-direction: column; align-items: start; padding: 0 20px; }
+        .section-title { color: #000; font-size: 18px; font-weight: 600; }
+        .form-container { display: flex; margin-top: 40px; width: 100%; flex-direction: column; justify-content: center; }
+        .form-group { display: block; max-width: 100%; width: 315px; gap: 7px; white-space: nowrap; margin-bottom: 25px; }
+        .form-label { color: #a7a7a9; font-size: 15px; align-self: start; }
+        .form-input {
+            border: none; /* 테두리 없애기 */
+            border-bottom: 1px solid #a7a7a9; /* 아래 선 추가 */
+            outline: none; /* 포커스 시 테두리 없애기 */
+            color: #000;
+            font-size: 18px;
+            width: 100%;
+            padding: 8px 0; /* 아래 선과 입력 텍스트 간격 조정 */
+        }
+        .input-underline { align-self: stretch; height: 1px; border: 1px solid #a7a7a9; }
+        .agreement-section { display: flex; margin-top: 209px; width: 100%; flex-direction: column; font-size: 15px; color: #575759; justify-content: center; }
+        .agreement-item { display: flex; max-width: 100%; width: 325px; margin-bottom: 10px; }
+        .checkbox-image { aspect-ratio: 1; object-fit: contain; object-position: center; width: 19px; }
+        /* 선택된 상태에 따라 색상 변경 */
+        input[type="checkbox"]:checked + label .checkbox-image {
+            filter: brightness(0) saturate(100%) invert(42%) sepia(86%) saturate(2200%) hue-rotate(178deg) brightness(91%) contrast(101%);
+        }
+
+        /* 선택되지 않은 상태 색상 */
+        input[type="checkbox"]:not(:checked) + label .checkbox-image {
+            filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(0%) hue-rotate(182deg) brightness(84%) contrast(85%);
+        }
+
+        .agreement-text { flex-grow: 1; width: 302px; flex-basis: auto; }
+        .submit-button { border-radius: 10px; background-color: #2260bf; width: 100%; margin-top: 20px; font-size: 18px; color: #fff; padding: 10px 60px; border: none; cursor: pointer; }
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        </style>
+    </head>
+    <body>
+        <main class="verification-page">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b26dcbbc6c8ae81fd01982f10f37c54fc5595df0e89e6cfab1df1cba559e60b5?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
+                 alt=""
+                 class="header-image" />
+            <div class="content-wrapper">
+                <h1 class="section-title">기본 정보를 입력해주세요</h1>
+                <form class="form-container">
+                    <div class="form-group">
+                        <label for="id-number" class="form-label">주민등록번호</label>
+                        <div>
+                            <input type="text"
+                                   id="id-number"
+                                   class="form-input id-number-input"
+                                   placeholder="000000"
+                                   aria-label="주민등록번호 앞 6자리"
+                                   maxlength="6"
+                                   style="width: 50%" />
+                            <span aria-hidden="true">-</span>
+                            <input type="password"
+                                   aria-label="주민등록번호 뒷 1자리"
+                                   maxlength="1"
+                                   class="form-input"
+                                   style="width: 1em" />
+                            <span aria-hidden="true">******</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">이름</label>
+                        <div>
+                            <input type="text" id="name" class="form-input" placeholder="홍길동" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="carrier" class="form-label">통신사</label>
+                        <div>
+                            <input type="text" id="carrier" class="form-input" placeholder="SKT" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">휴대폰 번호</label>
+                        <div>
+                            <input type="tel" id="phone" class="form-input" placeholder="01012345678" />
+                        </div>
+                    </div>
+                </form>
+                <section class="agreement-section">
+                    <div class="agreement-item">
+                        <input type="checkbox"
+                               id="agreement1"
+                               class="visually-hidden"
+                               required
+                               checked />
+                        <label for="agreement1" class="agreement-text">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fff738c0176c486898646750a420e0767a8d98f3e64745b72797450414cc36c?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
+                                 alt=""
+                                 class="checkbox-image" />
+                            <span style="color: #008dff;">필수</span> 투깐부 회원 약관 및 동의사항
+                        </label>
+                    </div>
+                    <div class="agreement-item">
+                        <input type="checkbox"
+                               id="agreement2"
+                               class="visually-hidden"
+                               required
+                               checked />
+                        <label for="agreement2" class="agreement-text">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fff738c0176c486898646750a420e0767a8d98f3e64745b72797450414cc36c?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
+                                 alt=""
+                                 class="checkbox-image" />
+                            <span style="color: #008dff;">필수</span> 본인 확인 서비스 약관 및 동의사항
+                        </label>
+                    </div>
+                    <div class="agreement-item optional-agreement">
+                        <input type="checkbox" id="agreement3" class="visually-hidden" />
+                        <label for="agreement3" class="agreement-text">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc3e853b16ba3668f75580782fee98068da457a81caef9a670eedb9ae5302ef8?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
+                                 alt=""
+                                 class="checkbox-image" />
+                            <span style="color: #d7d7d9;">선택</span> 본인 확인 서비스 약관 및 동의사항
+                        </label>
+                    </div>
+                </section>
+                <button type="submit" class="submit-button">
+                    <a href="./sign-up3.html" style="color: white; text-decoration: none;">본인 인증하기</a>
+                </button>
+            </div>
+        </main>
+    </body>
+</html>
