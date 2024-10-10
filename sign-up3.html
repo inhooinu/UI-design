@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Final</title>
-        <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Final</title>
+    <style>
             .authentication-page {
               background-color: #fff;
               display: flex;
@@ -51,19 +51,22 @@
               display: flex;
               margin-top: 40px;
               align-items: center;
-              gap: 15px;
+              gap: 10px;
               font-size: 23px;
+              width: 100%;
             }
             
             .verification-digit {
               border-radius: 10px;
               background-color: #fff;
-              padding: 12px;
+              padding: 10px;
               border: 1px solid #a7a7a9;
               width: 1em;
               display: flex;
               justify-content: center;
               align-items: center;
+              font-size: 23px;
+              color: #008dff;
             }
             
             .resend-text {
@@ -78,7 +81,6 @@
               align-self: center;
               margin-top: 20px;
               width: 100%;
-              max-width: 335px;
               font-size: 18px;
               color: #fff;
               font-weight: 400;
@@ -87,61 +89,61 @@
               border: none;
               cursor: pointer;
             }
-        </style>
-    </head>
-    <body>
-        <section class="authentication-page">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b26dcbbc6c8ae81fd01982f10f37c54fc5595df0e89e6cfab1df1cba559e60b5?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
-                 alt=""
-                 class="header-image" />
-            <div class="content-wrapper">
-                <h2 class="instruction-text">
-                    문자로 받은
-                    <br />
-                    인증번호 6자리를 입력해주세요
-                </h2>
-                <p class="timer-text">남은시간 02:52</p>
-                <form class="verification-code-container">
-                    <input type="text"
-                           id="digit1"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                    <input type="text"
-                           id="digit2"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                    <input type="text"
-                           id="digit3"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                    <input type="text"
-                           id="digit4"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                    <input type="text"
-                           id="digit5"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                    <input type="text"
-                           id="digit6"
-                           class="verification-digit"
-                           maxlength="1"
-                           pattern="\d"
-                           required />
-                </form>
-                <a href="#" class="resend-text">문자가 안 오나요?</a>
-                <button class="confirm-button">확인</button>
-            </div>
-        </section>
-    </body>
+    </style>
+  </head>
+  <body>
+    <section class="authentication-page">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b26dcbbc6c8ae81fd01982f10f37c54fc5595df0e89e6cfab1df1cba559e60b5?placeholderIfAbsent=true&apiKey=2a9af19d0d7942bebdc7f730337b6ce2"
+           alt=""
+           class="header-image" />
+      <div class="content-wrapper">
+        <h2 class="instruction-text">
+          문자로 받은
+          <br />
+          인증번호 6자리를 입력해주세요
+        </h2>
+        <p class="timer-text">남은시간 02:52</p>
+        <form class="verification-code-container">
+          <input type="text"
+                 id="digit1"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+          <input type="text"
+                 id="digit2"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+          <input type="text"
+                 id="digit3"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+          <input type="text"
+                 id="digit4"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+          <input type="text"
+                 id="digit5"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+          <input type="text"
+                 id="digit6"
+                 class="verification-digit"
+                 maxlength="1"
+                 pattern="\d"
+                 required />
+        </form>
+        <a href="#" class="resend-text">문자가 안 오나요?</a>
+        <button class="confirm-button">확인</button>
+      </div>
+    </section>
+  </body>
 </html>
